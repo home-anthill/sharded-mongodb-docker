@@ -11,7 +11,6 @@ if [ "$DO_INIT_REPSET" = true ] ; then
         rs.initiate({_id: "${REPSET_NAME}", members: [
             {_id: 0, host: "${REPSET_NAME}-replica0:27017"},
             {_id: 1, host: "${REPSET_NAME}-replica1:27017"},
-            {_id: 2, host: "${REPSET_NAME}-replica2:27017"}
         ], settings: {electionTimeoutMillis: 2000}});
 EOF
 fi
